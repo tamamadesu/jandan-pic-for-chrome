@@ -1,0 +1,25 @@
+{
+	"name":"煎蛋网-无聊图",
+	"version":"1.0.0",
+	"description":"煎蛋网--无聊图 chrome插件!",
+
+	//"options_page": "html/options.html",   选项页面。可以在扩展程序——选项里访问到的 
+
+	//插件访问权限，tabs是指打开的标签页，notifications是指桌面弹出窗口，其它两个是可以访问的链接地址。   
+	"permissions":[
+		"tabs","notifications","http://*/*","https://*/*"
+	],
+	"web_accessible_resources": [
+    	"icons/icon.png"
+  	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"browser_action":{ 
+		"default_icon":"icons/icon.png",
+		"default_popup":"popup.html",
+		"default_title": "煎蛋网--无聊图插件"
+	},
+	"background":{
+		"page":"background.html"
+	},
+	"manifest_version":2
+}
