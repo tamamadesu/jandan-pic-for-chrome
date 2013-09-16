@@ -9,13 +9,17 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="all">
 </head>
     <body>
-        <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <span class="navbar-brand">煎蛋无聊图---chrome插件</span>
+        <div class="navbar navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;"><i></i>
+                  <span class="brand">煎蛋看图</span>
+                  <ul class="nav" id="select">
+                    <li class="active" id="http://jandan.net/pic"><a href="#">无聊图</a></li>
+                    <li id="http://jandan.net/ooxx"><a href="#">妹纸图</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </header>
         <div class="loading">
             <div id="blockG_1" class="facebook_blockG"></div>
             <div id="blockG_2" class="facebook_blockG"></div>
@@ -24,7 +28,7 @@
         <div class="wrap">
             <div class="main">
                 <ul id="show" class="pic-list"></ul>
-                <ul class="pagination navbar-fixed-bottom navbar-text"></ul>
+                <div class="pagination navbar-fixed-bottom navbar-text"><ul></ul></div>
             </div>
         </div>
     <!--<script src="js/socket.io.min.js"></script>

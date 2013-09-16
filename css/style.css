@@ -18,7 +18,7 @@ body{
     padding: 10px;
 }
 .pagination{
-    margin:0 0 0 10px;
+    margin-bottom: -16px !important;
 }
 .pagination > li{
     display: inline-block;

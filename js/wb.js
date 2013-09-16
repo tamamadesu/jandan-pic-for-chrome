@@ -27,7 +27,7 @@ function getPages(data){
         pages = $data.find(".comments").eq(0).find("p");
 
     $(pages).children().wrap("<li />");
-    $(".pagination").html($(pages).html());
+    $(".pagination ul").html($(pages).html().replace(" … ",""));
     $(".pagination").delegate("a","click",function(){
         var href = $(this).attr("href");
         console.log(href);
@@ -53,8 +53,15 @@ function syncGetData(url){
     });
 }
 $(function(){
-    // syncGetData('http://jandan.net/pic/')
-    syncGetData('http://jandan.net/pic')
+    // syncGetData('http://jandan.net/pic/');
+    var url = 'http://jandan.net/pic';
+    $("#select li a").click(function(){
+        $("#select li").removeClass("active");
+        $(this).parent('li').addClass("active");
+        url = $(this).parent('li').attr("id");
+        syncGetData(url);
+    })
+    syncGetData(url)
 })
 
 // var background = chrome.extension.getBackgroundPage();
